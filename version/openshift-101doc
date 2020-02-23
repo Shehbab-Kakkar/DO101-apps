@@ -1,0 +1,64 @@
+docker network ls
+bridge network
+
+docker network inspect network-id
+
+git config --global user.name Shehbab
+git config --global email.name shehbab1@gmail.com
+git config --global credential.help cache
+==================
+Merging feature branch with master
+git checkout -b feature2
+git add .
+git commit -m "add feature2"
+git add .
+git commit -m "update dependencies"
+git pull
+git checkout master
+git merge feature2
+=======================
+oc login api-url
+oc new-project project-name
+oc new-app --name version http:GIThub/Shehbab-Kakkar/D0101-apps#update-app  \
+    --context-dir version
+//version is the name of directory	in the branch update-app
+oc projects //to check whic project we are
+
+#oc get pods //will display build pod is running
+version-1-build
+
+#oc logs -f pods/version-1-build
+
+#oc get svc 
+version clusterIP clusterIPaddress No-ext-IP 8080/TCP AGe3sec
+
+#oc expose svc/version 
+route.route.openshift.io/version exposed
+
+#oc get routes
+name = version
+HOST = version-shehbab-version-apps.exampl.com
+SERVICES = version
+PORT = 8080-tcp
+TERMINATION = None
+==========================
+build, deploy and actual pods we can see.
+==========================
+how to run the updated build after making changes
+update the code and commit the code and then trigger the build 
+from build config ... option
+============================
+Automatic Trigger build, deploy and create new pod
+Using Webhooks URL.
+Openshift UI provide Webhooks in the buildconfig copy and add
+in the Settings > Webhooks for gitrepo.
+
+========================
+To select application
+Add > Catalog > Nodejs app 
+=======================
+In the deployment config we need to create env variable
+
+
+
+
